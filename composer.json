@@ -1,0 +1,40 @@
+{
+    "name": "byteweld/laravel-user-logger",
+    "description": "Laravel package for logging user activities with Laravel 11/12 support",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Byteweld\\LaravelUserLogger\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Byteweld\\LaravelUserLogger\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Byteweld\\LaravelUserLogger\\Providers\\UserLoggerServiceProvider"
+            ],
+            "aliases": {
+                "UserLogger": "Byteweld\\LaravelUserLogger\\Facades\\UserLogger"
+            }
+        }
+    },
+    "require": {
+        "php": "^8.2",
+        "laravel/framework": "^11.0"
+    },
+    "require-dev": {
+        "pestphp/pest": "^2.0",
+        "orchestra/testbench": "^8.0"
+    },
+    "scripts": {
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
